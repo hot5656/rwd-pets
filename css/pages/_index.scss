@@ -1,0 +1,278 @@
+.our-special {
+	padding: 50px 2.5%;
+
+	@include pad-below() {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	h2 {
+		text-align: center;
+		line-height: 30px;
+	}
+
+	h4 {
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	img {
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 30px;
+
+		@include pad-below() {
+			display: block;
+		}
+
+		li {
+			width: 30%;
+
+			@include pad-below() {
+				max-width: 320px;
+				width: 320px;
+				padding-left: 30px;
+				padding-right: 30px;
+				margin: 30px auto;
+			}
+		}
+	}
+
+	/* 畫兩橫線 */
+	.good-chef {
+		position: relative;
+		width: 200px;
+		margin: 0 auto;
+
+		.line1 {
+			position: absolute;
+			top: -60px;
+			left: -140px;
+			@include horizontal-line(120px, 1px, #989898);
+
+			@include pad-below() {
+				display: none;
+			}
+		}
+
+		.line2 {
+			position: absolute;
+			top: -60px;
+			left: 220px;
+			@include horizontal-line(120px, 1px, #989898);
+
+			@include pad-below() {
+				display: none;
+			}
+		}
+	}
+}
+
+.chef {
+	display: flex;
+	background: $base-color;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	color: $ground-color;
+
+	@include pad-below() {
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	h3 {
+		font-size: $font-m;
+		margin-bottom: 5px;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	.start {
+		flex-shrink: 0;
+		max-width: 470px;
+		height: 460px;
+		background: url(../../images/star.jpg) center no-repeat;
+
+		@include pad-below() {
+			margin: 0 auto;
+		}
+	}
+
+	.text {
+		padding-left: 20px;
+		margin-top: 80px;
+
+		@include pad-below() {
+			padding-left: 0px;
+			padding-bottom: 30px;
+			margin-top: 30px;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+	}
+}
+
+.response {
+	padding-top: 50px;
+
+	h3 {
+		text-align: center;
+	}
+
+	h4 {
+		margin: 20px 0;
+	}
+
+	p {
+		margin-bottom: 20px;
+
+		&.title {
+			float: right;
+		}
+	}
+
+	img {
+		border-radius: 50%;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		padding: 50px 2.5%;
+
+		@include pad-below() {
+			display: block;
+			padding: 30px 0;
+		}
+
+		li {
+			width: 32%;
+			display: flex;
+
+			@include pad-below() {
+				max-width: 320px;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 320px;
+				margin: 0 auto 30px auto;
+			}
+
+			.pic {
+				width: 67px;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.text {
+				margin-left: 10px;
+			}
+		}
+
+	}
+}
+
+.book {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #F6F4F3;
+
+	@include pad-below() {
+		padding-top: 40px;
+	}
+
+	h3 {
+		text-align: center;
+	}
+
+	.book-info {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 40px;
+
+		@include pad-below() {
+			display: block;
+			margin-top: 30px;
+		}
+
+		label {
+			font-size: $font-xxs;
+		}
+
+		button {
+			font-size: $font-xxs;
+			border: 0;
+			color: $highline-color;
+			padding: 5px 10px;
+			display: block;
+			float: right;
+			margin-left: 20px;
+			border-radius: 5px;
+			outline: none;
+
+			&[type=reset] {
+				background: #A09E9E;
+			}
+
+			&[type=submit] {
+				background: $bright-color;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.map {
+			width: 45%;
+
+			@include pad-below() {
+				max-width: 460px;
+				width: 100%;
+				margin: 0 auto 30px auto;
+				;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+
+		form {
+			width: 50%;
+
+			@include pad-below() {
+				max-width: 460px;
+				width: 100%;
+				margin: 0 auto;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+
+		.row {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		input {
+			&[type=radio] {
+				margin-right: 35px;
+			}
+
+			&.row {
+				line-height: 32px;
+				padding-left: 10px;
+				font-size: $font-xs;
+				margin-bottom: 10px;
+				width: 100%;
+			}
+		}
+	}
+}

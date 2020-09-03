@@ -1,0 +1,290 @@
+/* 外部限制框 */
+.tag {
+	/* 對外絕對定址 */
+	position: absolute;
+	height: 76px;
+	/* over 遮掉 */
+	overflow: hidden;
+	/* tag 超出 px */
+	top: -5px;
+	right: -5px;
+
+	/* 文字框 */
+	.tag-text {
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		/* 加至邊距離 */
+		padding: 2px 50px;
+		background-color: #00CC99;
+		/* 旋轉45度,移至合適點 */
+		transform: rotate(45deg) translate(48px, -20px);
+
+		/* 左邊三角 */
+		&::before {
+			content: '';
+			/* 對外絕對位置 */
+			position: absolute;
+			/* 畫直角三角形 */
+			border-style: solid;
+			border-width: 2.8px 2.8px 2.8px 2.8px;
+			border-color: transparent transparent #00856f #00856f;
+			/* translate(X, Y) - 相對參考位置 */
+			transform: rotate(-45deg) translate(-28px, -5.8px);
+		}
+
+		/* 右邊三角 */
+		&::after {
+			content: "";
+			/* 對外絕對位置 */
+			position: absolute;
+			/* 畫直角三角形 */
+			border-style: solid;
+			border-width: 2.8px 2.8px 2.8px 2.8px;
+			border-color: transparent transparent #00856f #00856f;
+			/* translate(X, Y) - 相對參考位置 */
+			transform: rotate(-45deg) translate(1.8px, 23.7px);
+		}
+	}
+}
+
+.content {
+	display: flex;
+	justify-content: space-around;
+	background: #EFE9E7;
+	padding: 40px 40px 0 40px;
+
+	@include pad-below() {
+		display: block;
+		padding: 20px 20px 0 20px;
+	}
+}
+
+.aside {
+	width: 26%;
+	padding-right: 20px;
+
+	@include pad-below() {
+		width: 100%;
+		margin-bottom: 20px;
+		padding-right: 0;
+	}
+
+	h3 {
+		font-size: $font-l;
+		margin-bottom: 20px;
+
+		i {
+			font-size: $font-symb1;
+		}
+	}
+
+	a {
+		display: inline-block;
+		width: 100%;
+		text-decoration: none;
+		line-height: 44px;
+		border-bottom: 1px solid $base-color;
+		color: $base-color;
+		font-size: $font-m;
+
+		&:hover,
+		&.active {
+			background: $base-color;
+			color: $highline-color;
+		}
+	}
+}
+
+
+.shop {
+	width: 72.5%;
+
+	@include pad-below() {
+		width: 100%;
+	}
+
+	.top {
+		display: flex;
+		justify-content: space-between;
+
+		@include pad-below() {
+			display: block;
+			padding-bottom: 30px;
+		}
+
+		.input {
+			position: relative;
+			width: 70%;
+
+			@include pad-below() {
+				position: relative;
+				width: 100%;
+			}
+
+			i {
+				font-size: $font-symb3;
+				position: absolute;
+				padding: 2px;
+				top: 0px;
+				right: 0;
+				background: $base-color;
+				color: $highline-color;
+			}
+
+			input {
+				width: 100%;
+				height: 30px;
+				padding-right: 32px;
+				border: 2px solid $base-color;
+				font-size: $font-xs;
+			}
+
+			p {
+				position: absolute;
+			}
+		}
+	}
+
+	.cart {
+		position: relative;
+
+		@include pad-below() {
+			top: 10px;
+			float: right;
+		}
+
+		i {
+			font-size: $font-symb2;
+		}
+
+		a {
+			color: $base-color;
+		}
+
+		p {
+			position: absolute;
+			top: -2px;
+			right: -2px;
+			background: #FF5E45;
+			color: $highline-color;
+			border-radius: 50%;
+			font-size: $font-3s;
+			width: 12px;
+			text-align: center;
+		}
+
+		span {
+			position: relative;
+			top: -5px;
+			display: inline-block;
+			border-right: 1px solid #000;
+			padding-right: 10px;
+			margin-right: 10px;
+			line-height: 16px;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include pad-below() {
+			display: block;
+		}
+
+		li {
+			// reference tag use
+			position: relative;
+			width: 31%;
+			text-align: center;
+			margin-top: 30px;
+			padding-bottom: 10px;
+			background: #EFE9E7;
+			box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+
+			@include pad-below() {
+				max-width: 300px;
+				width: 100%;
+				margin: 30px auto 0 auto;
+			}
+
+			.heart i {
+				font-size: $font-symb3;
+			}
+
+			p {
+				font-size: $font-3s;
+				height: 28px;
+			}
+
+			.price {
+				font-size: $font-m;
+				margin-bottom: 15px;
+				font-weight: bold;
+			}
+
+			button {
+				font-size: $font-xs;
+				color: #FF5E45;
+				border: 2px solid #FF5E45;
+				padding: 10px 0;
+				border-radius: 5px;
+
+				&:focus {
+					outline: 0;
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		.add-cart {
+			width: 90%;
+		}
+
+		.item1 .pic {
+			background: url(../../images/pet1.jpg) no-repeat center;
+		}
+
+		.item2 .pic {
+			background: url(../../images/pet2.jpg) no-repeat center;
+		}
+
+		.item3 .pic {
+			background: url(../../images/pet3.jpg) no-repeat center;
+		}
+
+		.item4 .pic {
+			background: url(../../images/pet4.jpg) no-repeat center;
+		}
+	}
+
+	.line {
+		width: 90px;
+		border-bottom: 1px solid $base-color;
+		margin: 10px auto 20px auto;
+	}
+
+	.pic {
+		max-width: 100%;
+		height: 120px;
+		margin: 0 auto 10px auto;
+	}
+
+	.heart {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 0;
+		left: 0;
+
+		i {
+			margin-top: 7px;
+			color: $highline-color;
+		}
+	}
+}

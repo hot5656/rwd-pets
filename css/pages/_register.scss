@@ -1,0 +1,117 @@
+.content {
+	max-width: 620px;
+	margin: 50px auto 4px auto;
+	border-top: 4px solid $bright-color;
+	box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+
+	@include screen640() {
+		box-shadow: none;
+		border: 0;
+	}
+
+	h1 {
+		font-size: $font-3l;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: $font-m;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.good {
+		font-size: $font-m;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.input-container {
+		position: relative;
+
+		.icon {
+			position: absolute;
+			top: 7px;
+			left: 6px;
+			font-size: $font-m;
+			color: rgba(61, 17, 0, 0.50);
+		}
+
+		input {
+			padding-left: 30px;
+		}
+	}
+}
+
+.row {
+	display: block;
+}
+
+
+.register {
+	margin-top: 35px;
+
+	.register-input {
+		margin-top: 15px;
+		display: flex;
+		justify-content: space-evenly;
+
+		@include screen640() {
+			display: block;
+		}
+
+		.clause {
+			width: 285px;
+
+			@include screen640() {
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+		}
+
+		form {
+			max-width: 285px;
+			font-size: $font-xxs;
+
+			@include screen640() {
+				margin: 0 auto;
+			}
+
+			input {
+				height: 32px;
+				width: 100%;
+				margin-bottom: 15px;
+				border-radius: 5px;
+				border: 1px solid #CCCCCC;
+			}
+
+			p {
+				margin-top: -15px;
+				margin-bottom: 30px;
+				color: $bright-color;
+
+				@include screen640() {
+					margin-bottom: 10px;
+				}
+			}
+
+			button {
+				float: right;
+				margin-bottom: 15px;
+				width: 125px;
+				line-height: 30px;
+				background: $bright-color;
+				color: $highline-color;
+				border: 0;
+				border-radius: 5px;
+				outline: none;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+	}
+}
