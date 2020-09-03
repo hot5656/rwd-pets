@@ -657,19 +657,19 @@ h4 {
 }
 
 .shop ul .item1 .pic {
-  background: url(../../images/pet1.jpg) no-repeat center;
+  background: url(../images/pet1.jpg) no-repeat center;
 }
 
 .shop ul .item2 .pic {
-  background: url(../../images/pet2.jpg) no-repeat center;
+  background: url(../images/pet2.jpg) no-repeat center;
 }
 
 .shop ul .item3 .pic {
-  background: url(../../images/pet3.jpg) no-repeat center;
+  background: url(../images/pet3.jpg) no-repeat center;
 }
 
 .shop ul .item4 .pic {
-  background: url(../../images/pet4.jpg) no-repeat center;
+  background: url(../images/pet4.jpg) no-repeat center;
 }
 
 .shop .line {
